@@ -3,10 +3,34 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:vm="clr-namespace:TeamApplication.ViewModel"
         xmlns:local="clr-namespace:TeamApplication.View"
         mc:Ignorable="d"
-        Title="BaseWindow" Height="450" Width="800">
-    <Grid>
-        <Button></Button>
-    </Grid>
+        Title="Log-in" Height="500" Width="400" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" WindowStyle="None" Background="Transparent" AllowsTransparency="True">
+    <Window.Resources>
+        <vm:BaseViewModel x:Key="ViewModel" />
+    </Window.Resources>
+    <Border CornerRadius="15" Background="White">
+        <StackPanel Orientation="Vertical" DataContext="{StaticResource ViewModel}">
+            <StackPanel Height="80" Width="400" Orientation="Horizontal">
+                <Label Content="Log-in" FontSize="30" Height="80" Width="350" HorizontalContentAlignment="Center" VerticalContentAlignment="Top" FontStyle="Italic" Margin="25 0 0 0"/>
+                <Button HorizontalAlignment="Right" VerticalAlignment="Top" Height="25" Width="25" Background="Transparent" Margin="-5 2 0 0" Focusable="False" Style="{StaticResource buttonSubmit1}" Command="{Binding CloseCommand}">X</Button>
+            </StackPanel>
+            <StackPanel Height="50" Width="400" Orientation="Horizontal">
+                <Label Content="Username" FontSize="20" Height="80" Width="400" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            </StackPanel>
+            <StackPanel Height="50" Width="400" Orientation="Horizontal">
+                <TextBox Text="Salam" Width="250" Margin="90 10 0 10" Style="{StaticResource  TextBoxKey}" VerticalContentAlignment="Top"/>
+            </StackPanel>
+            <StackPanel Height="50" Width="400" Orientation="Horizontal">
+                <Label Content="Password" FontSize="20" Height="80" Width="400" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            </StackPanel>
+            <StackPanel Height="50" Width="400" Orientation="Horizontal">
+                <PasswordBox  Width="250" Margin="90 10 0 10" Style="{StaticResource PasswordBoxKey}" VerticalContentAlignment="Top"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Width="400" Height="80">
+                <Button Content="Submit" Width="100" Margin="150 20 0 0" Style="{StaticResource buttonSubmit}" Command="{Binding SubmitCommand}"/>
+            </StackPanel>
+        </StackPanel>
+    </Border>
 </Window>
