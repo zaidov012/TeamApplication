@@ -20,13 +20,13 @@
                 <Label Content="Username" FontSize="20" Height="80" Width="400" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
             </StackPanel>
             <StackPanel Height="50" Width="400" Orientation="Horizontal">
-                <TextBox Text="Salam" Width="250" Margin="90 10 0 10" Style="{StaticResource  TextBoxKey}" VerticalContentAlignment="Top"/>
+                <TextBox Text="{Binding Username}" Width="250" Margin="90 10 0 10" Style="{StaticResource  TextBoxKey}" VerticalContentAlignment="Top"/>
             </StackPanel>
             <StackPanel Height="50" Width="400" Orientation="Horizontal">
                 <Label Content="Password" FontSize="20" Height="80" Width="400" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
             </StackPanel>
             <StackPanel Height="50" Width="400" Orientation="Horizontal">
-                <PasswordBox  Width="250" Margin="90 10 0 10" Style="{StaticResource PasswordBoxKey}" VerticalContentAlignment="Top"/>
+                <TextBox Text="{Binding Password}" Width="250" Margin="90 10 0 10" Style="{StaticResource  TextBoxKey}" VerticalContentAlignment="Top"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal" Width="400" Height="80">
                 <Button Content="Submit" Width="100" Margin="150 20 0 0" Style="{StaticResource buttonSubmit}" Command="{Binding SubmitCommand}"/>
