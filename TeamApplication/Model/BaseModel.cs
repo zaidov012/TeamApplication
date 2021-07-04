@@ -4,22 +4,12 @@ namespace TeamApplication.Model
 {
     public class BaseModel
     {
-        [JsonProperty("name")]
-        public string Name { get; set; }
-        
-        [JsonProperty("name")]
-        public string Password { get; set; }
-
-        [JsonProperty("surname")]
-        public string Surname { get; set; }
-
-        [JsonProperty("age")]
-        public int Age { get; set; }
-
-        [JsonProperty("phone_number")]
-        public string PhoneNumber { get; set; }
-
-        [JsonProperty("mail")]
-        public string Mail { get; set; }
+        public string username { get; set; }
+        public string password { get; set; }
+        public string name { get; set; }
+        public string surname{ get; set; }
+        public int age{ get; set; }
+        public string phone_number{ get; set; }
+        public string mail{ get; set; }
     }
 }
