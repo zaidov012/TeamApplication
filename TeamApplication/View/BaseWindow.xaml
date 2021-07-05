@@ -3,8 +3,8 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:local="clr-namespace:TeamApplication.View"
         xmlns:vm="clr-namespace:TeamApplication.ViewModel"
+        xmlns:local="clr-namespace:TeamApplication.View"
         mc:Ignorable="d"
         Title="Register" Height="700" Width="400"
         WindowStyle="None"
@@ -18,8 +18,8 @@
     </Window.Resources>
     <Border CornerRadius="25" BorderThickness="5" Background="White" BorderBrush="White">
         <Grid  DataContext="{StaticResource mu}">
-           
-           
+
+
            <Grid.RowDefinitions>
                <RowDefinition Height="1*" />
                <RowDefinition Height="1*" />
@@ -31,27 +31,27 @@
                <RowDefinition Height="1*" />
 
            </Grid.RowDefinitions>
-           
+
            <TextBlock Grid.Row="0" Text="Name"  VerticalAlignment="Center" HorizontalAlignment="Center" Margin="50,0,5,0" FontSize="23"/>
            <TextBox Text="{Binding Name}" Grid.Row="0" Width="200" Height="30" HorizontalAlignment="Center" Margin="50,0,5,0" VerticalAlignment="Bottom" Style="{StaticResource roundcornerTextboxwithbordereffect   }"/>
-           
-           
+
+
            <TextBlock Grid.Row="1" Text="Surname"  VerticalAlignment="Center" HorizontalAlignment="Center" Margin="50,0,5,0" FontSize="23"/>
            <TextBox Text="{Binding Surname}" Grid.Row="1" Width="200" Height="30" HorizontalAlignment="Center" Margin="50,0,5,0" VerticalAlignment="Bottom"  Style="{StaticResource roundcornerTextboxwithbordereffect  }"/>
-            
-           
+
+
            <TextBlock Grid.Row="2" Text="Age"  VerticalAlignment="Center" HorizontalAlignment="Center" Margin="50,0,5,0" FontSize="23"/>
            <TextBox Text="{Binding Age,Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"  Grid.Row="2" Width="200" Height="30" HorizontalAlignment="Center" Margin="50,0,5,0" VerticalAlignment="Bottom"  Style="{StaticResource roundcornerTextboxwithbordereffect }" />
-           
+
            <TextBlock  Grid.Row="3" Text="Number"  VerticalAlignment="Center" HorizontalAlignment="Center" Margin="50,0,5,0" FontSize="23"/>
            <TextBox Text="{Binding Phone}" Grid.Row="3" Width="200" Height="30" HorizontalAlignment="Center" Margin="50,0,5,0" VerticalAlignment="Bottom"  Style="{StaticResource roundcornerTextboxwithbordereffect }" />
-           
+
            <TextBlock  Grid.Row="4" Text="Mail"  VerticalAlignment="Center" HorizontalAlignment="Center" Margin="50,0,5,0" FontSize="23"/>
            <TextBox Text="{Binding Mail}" Grid.Row="4" Width="200" Height="30" HorizontalAlignment="Center" Margin="50,0,5,0" VerticalAlignment="Bottom"  Style="{StaticResource roundcornerTextboxwithbordereffect}"   />
-           
+
            <TextBlock Grid.Row="5" Text="Username"  VerticalAlignment="Center" HorizontalAlignment="Center" Margin="50,0,5,0" FontSize="23"/>
            <TextBox Text="{Binding  username}" Grid.Row="5" Width="200" Height="30" HorizontalAlignment="Center" Margin="50,0,5,0" VerticalAlignment="Bottom" Style="{StaticResource roundcornerTextboxwithbordereffect   }"/>
-           
+
            <TextBlock Grid.Row="6" Text="Password"  VerticalAlignment="Center" HorizontalAlignment="Center" Margin="50,0,5,0" FontSize="23"/>
            <TextBox Text="{Binding  password}" Grid.Row="6" Width="200" Height="30" HorizontalAlignment="Center" Margin="50,0,5,0" VerticalAlignment="Bottom" Style="{StaticResource roundcornerTextboxwithbordereffect   }"/>
 
@@ -59,6 +59,6 @@
            <Button HorizontalAlignment="Right" VerticalAlignment="Top" Height="25" Width="25" Background="Transparent" BorderThickness="0" Margin="10" Focusable="False" Foreground="Red" Command="{Binding CloseCommand}">X</Button>
         </Grid>
     </Border>
-    
-    
+
+
 </Window>
