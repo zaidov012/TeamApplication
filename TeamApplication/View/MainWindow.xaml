@@ -1,0 +1,57 @@
+﻿<Window x:Class="TeamApplication.View.BaseWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:vm="clr-namespace:TeamApplication.ViewModel"
+        xmlns:local="clr-namespace:TeamApplication.View"
+        mc:Ignorable="d"
+        Title="User Management" Height="500" Width="400" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" WindowStyle="None" Background="Transparent" AllowsTransparency="True">
+        <Window.Resources>
+        <vm:UserManagementVM x:Key="vm"></vm:UserManagementVM>
+    </Window.Resources>
+    
+    <Border CornerRadius="15" Background="White" Height="500" Width="400">
+        <Grid DataContext="{StaticResource vm}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="180"/> <!--For Welcome Label-->
+                <RowDefinition Height="70"/> <!--Log in Button-->
+                <RowDefinition Height="70"/> <!--Register Button -->
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Button HorizontalAlignment="Right" VerticalAlignment="Top" Height="25" Width="25" Background="Transparent" Margin="5" Focusable="False" Foreground="Red" Command="{Binding CloseCommand}">X</Button>
+            <TextBlock Grid.Row="0" 
+                       FontSize="30" 
+                       VerticalAlignment="Center" 
+                       HorizontalAlignment="Center" 
+                       FontStyle="Italic" 
+                       Margin="10">Welcome</TextBlock>
+            <Button Grid.Row="1" 
+                    Content="Log In" 
+                    Background="Transparent" 
+                    BorderBrush="Black" Height="35" 
+                    Width="200" Focusable="False" 
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center" 
+                    FontSize="20" 
+                    Foreground="Black"
+                    FontStyle="Oblique"
+                    Command="{Binding  LogInButton}"/>
+            <Button Grid.Row="2"
+                    Content="Register" 
+                    Background="Transparent" 
+                    BorderBrush="Black" 
+                    Height="35" 
+                    Width="200" 
+                    Focusable="False" 
+                    HorizontalAlignment="Center" 
+                    VerticalAlignment="Center" 
+                    FontSize="20"
+                    Foreground="Black"
+                    FontStyle="Oblique" 
+                    FontFamily="Helvetica" 
+                    Command="{Binding RegisterButton}"/>
+            <TextBlock Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20">Click <TextBlock Foreground="Blue">here</TextBlock> for more info</TextBlock>
+        </Grid>
+    </Border>
+</Window>
