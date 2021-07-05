@@ -4,73 +4,73 @@
              xmlns:local="clr-namespace:TeamApplication"
              StartupUri="View/BaseWindow.xaml">
     <Application.Resources>
-        <Style TargetType="{x:Type TextBox}" x:Key="TextBoxKey">  
-            <Setter Property="Padding" Value="5"></Setter>  
-            <Setter Property="Template">  
-                <Setter.Value>  
-                    <ControlTemplate TargetType="{x:Type TextBox}">  
-                        <Border Background="{TemplateBinding Background}"    
-                                x:Name="Bd" BorderBrush="Black"   
-                                BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="10">  
-                            <ScrollViewer x:Name="PART_ContentHost"/>  
-                        </Border>  
-                        <ControlTemplate.Triggers>  
-                            <Trigger Property="IsEnabled" Value="False">  
-                                <Setter Property="Background" Value="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" TargetName="Bd"/>  
-                                <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlDarkDarkColor}}"/>  
-                            </Trigger>  
-                            <Trigger Property="Width" Value="Auto">  
-                                <Setter Property="MinWidth" Value="100"/>  
-                            </Trigger>  
-                            <Trigger Property="Height" Value="Auto">  
-                                <Setter Property="MinHeight" Value="20"/>  
-                            </Trigger>  
-                            <Trigger Property="IsMouseOver" Value="True">  
-                                <Setter TargetName="Bd" Property="BorderBrush" Value="Black"></Setter>  
-                                <Setter TargetName="Bd" Property="BorderThickness" Value="3"></Setter>  
-                            </Trigger>  
-                            <Trigger Property="IsFocused" Value="True">  
-                                <Setter TargetName="Bd" Property="BorderBrush" Value="Black"></Setter>  
-                                <Setter TargetName="Bd" Property="BorderThickness" Value="2"></Setter>  
-                            </Trigger>  
-                        </ControlTemplate.Triggers>  
-                    </ControlTemplate>  
-                </Setter.Value>  
-            </Setter>  
+        <Style TargetType="{x:Type TextBox}" x:Key="TextBoxKey">
+            <Setter Property="Padding" Value="5"></Setter>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type TextBox}">
+                        <Border Background="{TemplateBinding Background}"
+                                x:Name="Bd" BorderBrush="Black"
+                                BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="10">
+                            <ScrollViewer x:Name="PART_ContentHost"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsEnabled" Value="False">
+                                <Setter Property="Background" Value="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" TargetName="Bd"/>
+                                <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlDarkDarkColor}}"/>
+                            </Trigger>
+                            <Trigger Property="Width" Value="Auto">
+                                <Setter Property="MinWidth" Value="100"/>
+                            </Trigger>
+                            <Trigger Property="Height" Value="Auto">
+                                <Setter Property="MinHeight" Value="20"/>
+                            </Trigger>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="Bd" Property="BorderBrush" Value="Black"></Setter>
+                                <Setter TargetName="Bd" Property="BorderThickness" Value="3"></Setter>
+                            </Trigger>
+                            <Trigger Property="IsFocused" Value="True">
+                                <Setter TargetName="Bd" Property="BorderBrush" Value="Black"></Setter>
+                                <Setter TargetName="Bd" Property="BorderThickness" Value="2"></Setter>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
         </Style>
-        <Style TargetType="{x:Type PasswordBox}" x:Key="PasswordBoxKey">  
-            <Setter Property="Padding" Value="5"></Setter>  
-            <Setter Property="Template">  
-                <Setter.Value>  
-                    <ControlTemplate TargetType="{x:Type PasswordBox}">  
-                        <Border Background="{TemplateBinding Background}"    
-                                x:Name="Bd" BorderBrush="Black"   
-                                BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="10">  
-                            <ScrollViewer x:Name="PART_ContentHost"/>  
-                        </Border>  
-                        <ControlTemplate.Triggers>  
-                            <Trigger Property="IsEnabled" Value="False">  
-                                <Setter Property="Background" Value="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" TargetName="Bd"/>  
-                                <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlDarkDarkColor}}"/>  
-                            </Trigger>  
-                            <Trigger Property="Width" Value="Auto">  
-                                <Setter Property="MinWidth" Value="100"/>  
-                            </Trigger>  
-                            <Trigger Property="Height" Value="Auto">  
-                                <Setter Property="MinHeight" Value="20"/>  
-                            </Trigger>  
-                            <Trigger Property="IsMouseOver" Value="True">  
-                                <Setter TargetName="Bd" Property="BorderBrush" Value="Black"></Setter>  
-                                <Setter TargetName="Bd" Property="BorderThickness" Value="3"></Setter>  
-                            </Trigger>  
-                            <Trigger Property="IsFocused" Value="True">  
-                                <Setter TargetName="Bd" Property="BorderBrush" Value="Black"></Setter>  
-                                <Setter TargetName="Bd" Property="BorderThickness" Value="2"></Setter>  
-                            </Trigger>  
-                        </ControlTemplate.Triggers>  
-                    </ControlTemplate>  
-                </Setter.Value>  
-            </Setter>  
+        <Style TargetType="{x:Type PasswordBox}" x:Key="PasswordBoxKey">
+            <Setter Property="Padding" Value="5"></Setter>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type PasswordBox}">
+                        <Border Background="{TemplateBinding Background}"
+                                x:Name="Bd" BorderBrush="Black"
+                                BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="10">
+                            <ScrollViewer x:Name="PART_ContentHost"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsEnabled" Value="False">
+                                <Setter Property="Background" Value="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" TargetName="Bd"/>
+                                <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlDarkDarkColor}}"/>
+                            </Trigger>
+                            <Trigger Property="Width" Value="Auto">
+                                <Setter Property="MinWidth" Value="100"/>
+                            </Trigger>
+                            <Trigger Property="Height" Value="Auto">
+                                <Setter Property="MinHeight" Value="20"/>
+                            </Trigger>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="Bd" Property="BorderBrush" Value="Black"></Setter>
+                                <Setter TargetName="Bd" Property="BorderThickness" Value="3"></Setter>
+                            </Trigger>
+                            <Trigger Property="IsFocused" Value="True">
+                                <Setter TargetName="Bd" Property="BorderBrush" Value="Black"></Setter>
+                                <Setter TargetName="Bd" Property="BorderThickness" Value="2"></Setter>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
         </Style>
         <Style TargetType="Button" x:Key="buttonSubmit">
             <Setter Property="SnapsToDevicePixels" Value="True" />
@@ -84,8 +84,8 @@
                     <ControlTemplate TargetType="{x:Type Button}">
                         <Border Background="{TemplateBinding Background}"
                                 BorderBrush="LightBlue" BorderThickness="1" CornerRadius="15,0,15,0" x:Name="bd">
-                            <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" 
-                                              Margin="{TemplateBinding Padding}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" 
+                            <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                              Margin="{TemplateBinding Padding}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
                                               SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" RecognizesAccessKey="True" />
                         </Border>
                         <ControlTemplate.Triggers>
@@ -108,8 +108,8 @@
                     <ControlTemplate TargetType="{x:Type Button}">
                         <Border Background="{TemplateBinding Background}"
                                 BorderBrush="LightBlue" BorderThickness="1" CornerRadius="5" x:Name="bd">
-                            <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" 
-                                              Margin="{TemplateBinding Padding}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" 
+                            <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                              Margin="{TemplateBinding Padding}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
                                               SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" RecognizesAccessKey="True" />
                         </Border>
                         <ControlTemplate.Triggers>

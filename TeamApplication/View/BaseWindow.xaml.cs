@@ -7,6 +7,7 @@ namespace TeamApplication.View
         public BaseWindow()
         {
             InitializeComponent();
+            
         }
     }
 }
