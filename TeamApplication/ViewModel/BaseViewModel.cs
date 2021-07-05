@@ -23,7 +23,6 @@ namespace TeamApplication.ViewModel
         public string Username { get; set; }
         public string Password { get; set; }
         private List<BaseModel> _users { get; set; }
-        public ICommand CloseCommand { get; set; }
         private object _empty;
         private ICommand? _submitCommand;
 
@@ -37,9 +36,37 @@ namespace TeamApplication.ViewModel
         {
             _users = new List<BaseModel>();
             _empty = null;
+
+
             CloseCommand = new RelayCommand(o =>
             {
                 System.Windows.Application.Current.Shutdown();
+            }, o => true);
+
+            mycmd = new RelayCommand(o =>
+            {
+                User user = new User();
+                user.name = Name;
+                user.surname = Surname;
+                user.age = Age;
+                user.mail = Mail;
+                user.phone_number = Phone;
+                user.password = password;
+                user.username = username;
+                ValidateProps();
+
+                if(username!=null && Name!=null && Surname!=null && password!=null && Phone!=null && Mail!=null)
+                {
+                    string json = JsonConvert.SerializeObject(users, Formatting.Indented);
+                    File.WriteAllText(@"C:\Users\aydin\RiderProjects\TeamApplication\TeamApplication\Resources\users.txt",
+                        json);
+                    users.Add(user);
+                }
+
+
+
+
+
             }, o => true);
 
            ReadToFile();
@@ -75,42 +102,6 @@ namespace TeamApplication.ViewModel
                     return;
                 }
             }
-        }
-    }
-        public BaseViewModel()
-        {
-
-
-            CloseCommand = new RelayCommand(o =>
-            {
-                System.Windows.Application.Current.Shutdown();
-            }, o => true);
-
-            mycmd = new RelayCommand(o =>
-            {
-                User user = new User();
-                user.name = Name;
-                user.surname = Surname;
-                user.age = Age;
-                user.mail = Mail;
-                user.phone_number = Phone;
-                user.password = password;
-                user.username = username;
-                ValidateProps();
-
-                if(username!=null && Name!=null && Surname!=null && password!=null && Phone!=null && Mail!=null)
-                {
-                    string json = JsonConvert.SerializeObject(users, Formatting.Indented);
-                    File.WriteAllText(@"C:\Users\aydin\RiderProjects\TeamApplication\TeamApplication\Resources\users.txt",
-                        json);
-                    users.Add(user);
-                }
-
-
-
-
-
-            }, o => true);
         }
 
         private void ValidateProps()
